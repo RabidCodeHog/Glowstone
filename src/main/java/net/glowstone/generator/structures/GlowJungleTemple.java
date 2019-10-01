@@ -100,8 +100,8 @@ public class GlowJungleTemple extends GlowTemplePiece {
         entranceStairs.setFacingDirection(getRelativeFacing(BlockFace.SOUTH));
         builder.fill(new Vector(4, 4, 0), new Vector(7, 4, 0), entranceStairs.getItemType(),
             entranceStairs);
-        builder.fill(new Vector(1, 1, 1), new Vector(10, 3, 13), Material.AIR);
-        builder.fill(new Vector(5, 4, 7), new Vector(6, 4, 9), Material.AIR);
+        builder.fill(new Vector(1, 1, 1), new Vector(10, 3, 13), Material.CAVE_AIR);
+        builder.fill(new Vector(5, 4, 7), new Vector(6, 4, 9), Material.CAVE_AIR);
 
         // 2nd floor
         builder.fillWithRandomMaterial(new Vector(2, 5, 2), new Vector(9, 6, 2), random, stones);
@@ -109,23 +109,23 @@ public class GlowJungleTemple extends GlowTemplePiece {
         builder.fillWithRandomMaterial(new Vector(2, 5, 12), new Vector(9, 6, 12), random, stones);
         builder.fillWithRandomMaterial(new Vector(2, 5, 3), new Vector(2, 6, 11), random, stones);
         builder.fillWithRandomMaterial(new Vector(1, 7, 1), new Vector(10, 7, 13), random, stones);
-        builder.fill(new Vector(3, 5, 3), new Vector(8, 6, 11), Material.AIR);
-        builder.fill(new Vector(4, 7, 6), new Vector(7, 7, 9), Material.AIR);
-        builder.fill(new Vector(5, 5, 2), new Vector(6, 6, 2), Material.AIR);
-        builder.fill(new Vector(5, 6, 12), new Vector(6, 6, 12), Material.AIR);
+        builder.fill(new Vector(3, 5, 3), new Vector(8, 6, 11), Material.CAVE_AIR);
+        builder.fill(new Vector(4, 7, 6), new Vector(7, 7, 9), Material.CAVE_AIR);
+        builder.fill(new Vector(5, 5, 2), new Vector(6, 6, 2), Material.CAVE_AIR);
+        builder.fill(new Vector(5, 6, 12), new Vector(6, 6, 12), Material.CAVE_AIR);
 
         // 3rd floor
         builder.fillWithRandomMaterial(new Vector(1, 8, 1), new Vector(10, 9, 1), random, stones);
         builder.fillWithRandomMaterial(new Vector(10, 8, 2), new Vector(10, 9, 12), random, stones);
         builder.fillWithRandomMaterial(new Vector(1, 8, 13), new Vector(10, 9, 13), random, stones);
         builder.fillWithRandomMaterial(new Vector(1, 8, 2), new Vector(1, 9, 12), random, stones);
-        builder.fill(new Vector(2, 8, 2), new Vector(9, 9, 12), Material.AIR);
-        builder.fill(new Vector(5, 9, 1), new Vector(6, 9, 1), Material.AIR);
-        builder.fill(new Vector(5, 9, 13), new Vector(6, 9, 13), Material.AIR);
-        builder.setBlock(new Vector(10, 9, 5), Material.AIR);
-        builder.setBlock(new Vector(10, 9, 9), Material.AIR);
-        builder.setBlock(new Vector(1, 9, 5), Material.AIR);
-        builder.setBlock(new Vector(1, 9, 9), Material.AIR);
+        builder.fill(new Vector(2, 8, 2), new Vector(9, 9, 12), Material.CAVE_AIR);
+        builder.fill(new Vector(5, 9, 1), new Vector(6, 9, 1), Material.CAVE_AIR);
+        builder.fill(new Vector(5, 9, 13), new Vector(6, 9, 13), Material.CAVE_AIR);
+        builder.setBlock(new Vector(10, 9, 5), Material.CAVE_AIR);
+        builder.setBlock(new Vector(10, 9, 9), Material.CAVE_AIR);
+        builder.setBlock(new Vector(1, 9, 5), Material.CAVE_AIR);
+        builder.setBlock(new Vector(1, 9, 9), Material.CAVE_AIR);
 
         // roof
         builder.fillWithRandomMaterial(new Vector(1, 10, 1), new Vector(10, 10, 4), random, stones);
@@ -138,8 +138,8 @@ public class GlowJungleTemple extends GlowTemplePiece {
         builder.fillWithRandomMaterial(new Vector(3, 11, 6), new Vector(4, 11, 8), random, stones);
         builder.fillWithRandomMaterial(new Vector(3, 11, 9), new Vector(8, 11, 11), random, stones);
         builder.fillWithRandomMaterial(new Vector(4, 12, 4), new Vector(7, 12, 10), random, stones);
-        builder.fill(new Vector(4, 10, 5), new Vector(7, 10, 9), Material.AIR);
-        builder.fill(new Vector(5, 11, 6), new Vector(6, 11, 8), Material.AIR);
+        builder.fill(new Vector(4, 10, 5), new Vector(7, 10, 9), Material.CAVE_AIR);
+        builder.fill(new Vector(5, 11, 6), new Vector(6, 11, 8), Material.CAVE_AIR);
 
         // outside walls decorations
         builder.fillWithRandomMaterial(new Vector(2, 8, 0), new Vector(2, 9, 0), random, stones);
