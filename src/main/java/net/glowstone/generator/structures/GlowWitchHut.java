@@ -42,12 +42,12 @@ public class GlowWitchHut extends GlowTemplePiece {
 
         StructureBuilder builder = new StructureBuilder(world, this, genBoundingBox, delegate);
         builder.fill(new Vector(1, 1, 2), new Vector(5, 4, 7), Material.WOOD, 1,
-            Material.AIR); // hut body
+            Material.CAVE_AIR); // hut body
         builder.fill(new Vector(1, 1, 1), new Vector(5, 1, 1), Material.WOOD, 1); // hut steps
         builder.fill(new Vector(2, 1, 0), new Vector(4, 1, 0), Material.WOOD, 1); // hut steps
-        builder.fill(new Vector(4, 2, 2), new Vector(4, 3, 2), Material.AIR); // hut door
-        builder.fill(new Vector(5, 3, 4), new Vector(5, 3, 5), Material.AIR); // left window
-        builder.setBlock(new Vector(1, 3, 4), Material.AIR);
+        builder.fill(new Vector(4, 2, 2), new Vector(4, 3, 2), Material.CAVE_AIR); // hut door
+        builder.fill(new Vector(5, 3, 4), new Vector(5, 3, 5), Material.CAVE_AIR); // left window
+        builder.setBlock(new Vector(1, 3, 4), Material.CAVE_AIR);
         builder.setBlock(new Vector(1, 3, 5), Material.FLOWER_POT, 7);
         builder.setBlock(new Vector(2, 3, 2), Material.FENCE);
         builder.setBlock(new Vector(3, 3, 7), Material.FENCE);
