@@ -72,9 +72,10 @@ public class GlowDungeon extends GlowStructurePiece {
                     // checks a few blocks at bottom of walls are opened to air
                     // in order to have a natural door like access
                     if ((x == 0 || x == sizeX - 1 || z == 0 || z == sizeZ - 1)
-                            && y == 1 && type == Material.AIR
-                            && builder.getBlockState(new Vector(x, y + 1, z)).getType()
-                            == Material.AIR) {
+                            && y == 1 
+                            && (type == Material.AIR || type == Material.CAVE_AIR)
+                            && (builder.getBlockState(new Vector(x, y + 1, z)).getType() == Material.AIR
+                                    || builder.getBlockState(new Vector(x, y + 1, z)).getType() == Material.CAVE_AIR)) {
                         i++;
                         // TODO change min to 1 when caves will be generated ! this will be required
                         // so that dungeons are minimally exposed to air
@@ -115,11 +116,11 @@ public class GlowDungeon extends GlowStructurePiece {
                     if (y > 0 && x > 0 && z > 0 && x < sizeX - 1 && y < HEIGHT - 1
                             && z < sizeZ - 1) {
                         // empty space inside
-                        builder.setBlock(new Vector(x, y, z), Material.AIR);
+                        builder.setBlock(new Vector(x, y, z), Material.CAVE_AIR);
                     } else if (!builder.getBlockState(new Vector(x, y - 1, z)).getType()
                             .isSolid()) {
                         // cleaning walls from non solid materials (because of air gaps below)
-                        builder.setBlock(new Vector(x, y, z), Material.AIR);
+                        builder.setBlock(new Vector(x, y, z), Material.CAVE_AIR);
                     } else if (state.getType().isSolid()) {
                         // for walls we only replace solid material in order to
                         // preserve the air gaps
@@ -154,7 +155,7 @@ public class GlowDungeon extends GlowStructurePiece {
             for (int j = 0; j < 3; j++) {
                 int x = random.nextInt((radiusX << 1) - 1) + 1;
                 int z = random.nextInt((radiusZ << 1) - 1) + 1;
-                if (builder.getBlockState(new Vector(x, 1, z)).getType() == Material.AIR) {
+                if (builder.getBlockState(new Vector(x, 1, z)).getType() == Material.CAVE_AIR) {
                     BlockFace face = null;
                     int solidBlocksCount = 0;
                     if (builder.getBlockState(new Vector(x - 1, 1, z)).getType()
@@ -178,10 +179,8 @@ public class GlowDungeon extends GlowStructurePiece {
                         face = BlockFace.NORTH;
                     }
                     if (solidBlocksCount == 1) {
-                        builder
-                                .createRandomItemsContainer(new Vector(x, 1, z), random,
-                                        chestContent,
-                                        new Chest(face), 8);
+                        builder.createRandomItemsContainer(new Vector(x, 1, z), random,
+                                    chestContent, new Chest(face), 8);
                         break;
                     }
                 }
