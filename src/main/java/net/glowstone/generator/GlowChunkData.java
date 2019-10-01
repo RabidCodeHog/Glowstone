@@ -34,6 +34,10 @@ public class GlowChunkData implements ChunkData {
 
     @Override
     public Material getType(int x, int y, int z) {
+        //if height is outside the normal world bounds, use void_air material instead
+        if (y < 0 || y >= maxHeight) {
+            return Material.VOID_AIR;
+        }
         return Material.getMaterial(getTypeId(x, y, z));
     }
 
