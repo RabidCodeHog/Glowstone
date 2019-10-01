@@ -65,7 +65,7 @@ public class StructureBuilder {
                 return entry.getKey();
             }
         }
-        return new StructureMaterial(Material.AIR);
+        return new StructureMaterial(Material.CAVE_AIR);
     }
 
     public BlockState getBlockState(Vector pos) {
