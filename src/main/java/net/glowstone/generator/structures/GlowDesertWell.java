@@ -44,7 +44,7 @@ public class GlowDesertWell extends GlowStructurePiece {
         }
 
         builder.fill(new Vector(0, 0, 0), new Vector(4, 2, 4), Material.SANDSTONE);
-        builder.fill(new Vector(1, 2, 1), new Vector(3, 2, 3), Material.AIR);
+        builder.fill(new Vector(1, 2, 1), new Vector(3, 2, 3), Material.CAVE_AIR);
         builder.setBlock(new Vector(2, 2, 0), Material.STEP, 1);
         builder.setBlock(new Vector(0, 2, 2), Material.STEP, 1);
         builder.setBlock(new Vector(4, 2, 2), Material.STEP, 1);
